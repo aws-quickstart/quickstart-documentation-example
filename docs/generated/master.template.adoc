@@ -1,0 +1,43 @@
+IMPORTANT: Last Change to input parameters on: 2020-05-06 11:01:56
+
+== Availability Zone Configuration
+
+[width="100%",cols="20%,9%,71%",options="header",]
+|===
+|Parameter label (name) |Default |Description
+|**Availability Zones**(`AvailabilityZones`) |**Requires Input** |List
+of Availability Zones to use for the subnets in the VPC. Only two
+Availability Zones are used for this deployment, and the logical order
+of your selections is preserved.
+|===
+== Network Configuration
+
+[width="100%",cols="38%,9%,53%",options="header",]
+|===
+|Parameter label (name) |Default |Description
+|**VPC CIDR**(`VPCCIDR`) |10.0.0.0/16 |CIDR block for the VPC
+
+|**Public subnet 1 CIDR**(`PublicSubnet1CIDR`) |10.0.128.0/20 |CIDR
+block for the public (DMZ) subnet 1 located in Availability Zone 1
+
+|**Public subnet 2 CIDR**(`PublicSubnet2CIDR`) |10.0.144.0/20 |CIDR
+block for the public (DMZ) subnet 2 located in Availability Zone 2
+
+|**NO_LABEL**(`PrivateSubnet1CIDR`) |10.0.0.0/19 |CIDR block for private
+subnet 1 located in Availability Zone 1
+
+|**NO_LABEL**(`PrivateSubnet2CIDR`) |10.0.32.0/19 |CIDR block for
+private subnet 2 located in Availability Zone 2
+|===
+== Webserver Configuration
+
+[width="100%",cols="26%,11%,63%",options="header",]
+|===
+|Parameter label (name) |Default |Description
+|**Deprecated: Key pair name**(`KeyPairName`) |**Requires Input** |The
+name of an existing public/private key pair, which allows you to
+securely connect to your instance after it launches
+
+|**Webserver CIDR**(`WebserverCIDR`) |**Requires Input** |Allowed CIDR
+block for webserver access
+|===
