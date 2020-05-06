@@ -1,0 +1,21 @@
+-----------------------------------------------------------------------------
+Region: us-west-2
+StackName: tCaT-quickstart-documentation-base-lab-master-vpc-123a75364b254846bc9dd12445436b76
+*****************************************************************************
+ResourceStatusReason:  
+The following resource(s) failed to create: [VPCStack].
+*****************************************************************************
+*****************************************************************************
+Events:  
+TimeStamp                         ResourceStatus      ResourceType                LogicalResourceId                                                                   ResourceStatusReason
+--------------------------------  ------------------  --------------------------  ----------------------------------------------------------------------------------  ---------------------------------------------------------------------------------------------
+2020-05-06 12:27:28.666000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack  tCaT-quickstart-documentation-base-lab-master-vpc-123a75364b254846bc9dd12445436b76  The following resource(s) failed to create: [VPCStack].
+2020-05-06 12:27:27.881000+00:00  CREATE_FAILED       AWS::CloudFormation::Stack  VPCStack                                                                            S3 error: Access Denied
+                                                                                                                                                                      For more information check http://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html
+2020-05-06 12:27:26.416000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  VPCStack
+2020-05-06 12:27:22.414000+00:00  CREATE_IN_PROGRESS  AWS::CloudFormation::Stack  tCaT-quickstart-documentation-base-lab-master-vpc-123a75364b254846bc9dd12445436b76  User Initiated
+*****************************************************************************
+-----------------------------------------------------------------------------
+Tested on: Wednesday, 06. May 2020 05:28AM
+-----------------------------------------------------------------------------
+

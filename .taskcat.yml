@@ -1,0 +1,23 @@
+project:
+  name: quickstart-documentation-base
+  owner: tonynv@amazon.com
+  package_lambda: false
+  regions:
+  - ap-southeast-1
+  - ap-southeast-2
+  - eu-central-1
+  - eu-west-1
+  - us-east-1
+  - us-west-1
+  - us-west-2
+tests:
+  lab-master-vpc:
+    parameters:
+      AvailabilityZones: $[taskcat_getaz_2]
+      EmailAddress: email@yourdomain.com
+      KeyPairName: cikey
+      QSS3BucketName: $[taskcat_autobucket]
+      WebserverCIDR: 0.0.0.0/0
+    regions:
+    - us-west-2
+    template: templates/master.template.yaml
