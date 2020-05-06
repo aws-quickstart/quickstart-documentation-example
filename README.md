@@ -27,7 +27,7 @@ Root folder Main Documentation (docroot)
  **Example:** To embed overview.adoc file from __common__ 
  ```
  # add to this to index.adoc
- include::https://raw.githubusercontent.com/path-to-file
+ include::https://raw.githubusercontent.com/aws-quickstart/quickstart-documentation-base/master/docs/common/overview.adoc
  ```
 ### css 
  ```
