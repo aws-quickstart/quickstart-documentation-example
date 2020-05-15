@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.8.dev">
-<title>Untitled</title>
+<meta name="generator" content="Asciidoctor 2.0.10">
+<title>Quick Start title</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -437,25 +437,279 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
+<h1>Quick Start title</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Quick Start Reference Deployment</div>
+<ul class="sectlevel1">
+<li><a href="#_overview">Overview</a></li>
+<li><a href="#_software_on_aws">Software on AWS</a></li>
+<li><a href="#_cost">Cost</a></li>
+<li><a href="#_architecture">Architecture</a></li>
+<li><a href="#_planning_the_deployment">Planning the deployment</a>
+<ul class="sectlevel2">
+<li><a href="#_specialized_knowledge">Specialized knowledge</a></li>
+</ul>
+</li>
+<li><a href="#_planning_the_deployment_2">Planning the deployment</a></li>
+<li><a href="#_specialized_knowledge_2">Specialized knowledge</a></li>
+<li><a href="#_deployment_steps">Deployment Steps</a>
+<ul class="sectlevel2">
+<li><a href="#_step_1_prepare_an_aws_account">Step 1 Prepare An AWS Account</a></li>
+<li><a href="#_step_2_launch_the_stack">Step 2 Launch the stack</a></li>
+<li><a href="#_troubleshoot">Troubleshoot</a></li>
+<li><a href="#_security">Security</a></li>
+</ul>
+</li>
+<li><a href="#_github_repository">GitHub Repository</a></li>
+<li><a href="#_document_revisions">Document Revisions</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
+<div class="sect1">
+<h2 id="_overview">Overview</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><a href="http://aws.amazon.com/quickstart/">Quick Starts</a> are automated reference
-deployments for AWS Cloud infrastructure components and key enterprise
-workloads on the AWS Cloud. Each Quick Start launches, configures, and
-runs AWS compute, network, storage, and other services, using AWS best
-practices for security and availability.</p>
+<p>This Quick Start reference deployment guide provides step-by-step
+instructions for deploying &lt;software&gt; on the AWS Cloud.</p>
+</div>
+<div class="paragraph">
+<p>This Quick Start is for users who &lt;target audience and usage scenario&gt;.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+lease know that we may share who uses AWS
+Quick Starts with the AWS Partner Network (APN) Partner that
+collaborated with AWS on the content of the Quick Start.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_software_on_aws">Software on AWS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>&lt;Describe how the software works on AWS.&gt;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cost">Cost</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You are responsible for the cost of the AWS services used while running
+this Quick Start reference deployment. There is no additional cost for
+using the Quick Start.</p>
+</div>
+<div class="paragraph">
+<p>The AWS CloudFormation template for this Quick Start includes
+configuration parameters that you can customize. Some of the settings,
+such as the instance type, number of Availability Zones, use of NAT
+gateways or NAT instances (depending on the AWS Region you choose), and
+amount of data that flows through the NAT device, will determine the
+cost of deployment. To get an estimate, you can use the
+<a href="http://calculator.s3.amazonaws.com/index.html">AWS Simple Monthly
+Calculator</a>.</p>
+</div>
+<div class="paragraph">
+<p>For pricing details, see the <a href="https://aws.amazon.com/ec2/pricing/">Amazon
+EC2 pricing</a> and <a href="https://aws.amazon.com/vpc/pricing/">Amazon VPC pricing</a>
+pages.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_architecture">Architecture</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Deploying this Quick Start for a new virtual private cloud (VPC) with
+<strong>default parameters</strong> builds the following &lt;software&gt; environment in the
+AWS Cloud.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/architecture_diagram.png" alt="image" width="648" height="439"></span></p>
+</div>
+<div class="paragraph">
+<p>Figure 1: Quick Start architecture for &lt;software&gt; on AWS</p>
+</div>
+<div class="paragraph">
+<p>As shown in Figure 1, the Quick Start sets up the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A highly available architecture that spans two Availability Zones.*</p>
+</li>
+<li>
+<p>A VPC configured with public and private subnets, according to AWS
+best practices, to provide you with your own virtual network on AWS.*</p>
+</li>
+<li>
+<p>In the public subnets:</p>
+</li>
+<li>
+<p>Managed network address translation (NAT) gateways to allow outbound
+internet access for resources in the private subnets.*</p>
+</li>
+<li>
+<p>A Linux bastion host in an Auto Scaling group to allow inbound Secure
+Shell (SSH) access to EC2 instances in public and private subnets.*</p>
+</li>
+<li>
+<p>In the private subnets:</p>
+</li>
+<li>
+<p>&lt;describe any additional components&gt;.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The template that deploys the Quick Start into an existing VPC skips
+the components marked by asterisks and prompts you for your existing VPC
+configuration.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_planning_the_deployment">Planning the deployment</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_specialized_knowledge">Specialized knowledge</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_planning_the_deployment_2">Planning the deployment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Guidance for planning the deployment</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_specialized_knowledge_2">Specialized knowledge</h2>
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+This Quick Start assumes familiarity with &lt;knowledge expectations&gt;.
+This deployment guide also requires a moderate level of familiarity with
+AWS services. If you’re new to AWS, visit the
+<a href="https://aws.amazon.com/getting-started/">Getting Started Resource Center</a>
+and the <a href="https://aws.amazon.com/training/">AWS Training and Certification
+website</a>. These sites provide materials for learning how to design,
+deploy, and operate your infrastructure and applications on the AWS
+Cloud.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deployment_steps">Deployment Steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Follow the step-by-step instructions in this section to build the
+virtual network environment illustrated in architecture section i
+your AWS account. The AWS CloudFormation template provided with this
+Quick Start bootstraps the AWS networking infrastructure on the AWS
+Cloud from scratch.</p>
+</div>
+<div class="sect2">
+<h3 id="_step_1_prepare_an_aws_account">Step 1 Prepare An AWS Account</h3>
+<div class="paragraph">
+<p>Addd Steps here</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_2_launch_the_stack">Step 2 Launch the stack</h3>
+<div class="paragraph">
+<p>Addd Steps here</p>
+</div>
+<div class="sect3">
+<h4 id="_parameters">Parameters</h4>
+<div class="paragraph">
+<p>&lt;STUB&gt;</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_troubleshoot">Troubleshoot</h3>
+<div class="paragraph">
+<p>Addd Steps here</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security">Security</h3>
+<div class="paragraph">
+<p>Addd Steps here</p>
+</div>
+<div class="paragraph">
+<p><strong>Quick Start reference deployments</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AWS Quick Start home page<br>
+<a href="https://aws.amazon.com/quickstart/" class="bare">https://aws.amazon.com/quickstart/</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_github_repository">GitHub Repository</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can visit our [GitHub repository] to download
+the templates and scripts for this Quick Start, to post your comments,
+and to share your customizations with others.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_document_revisions">Document Revisions</h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+See releases in git <a href="https://github.com/aws-quickstart/replace-with-quickstart-name/releases" class="bare">https://github.com/aws-quickstart/replace-with-quickstart-name/releases</a>
+n
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-06 12:22:12 -0700
+Last updated 2020-05-15 14:57:53 -0700
 </div>
 </div>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-<script>hljs.initHighlighting()</script>
 </body>
 </html>

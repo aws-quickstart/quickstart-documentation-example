@@ -1,29 +1,29 @@
 = Quick Start title
 :imagesdir: images
-:includedir: include
+:includedir: common
 :icons: font
 :toc2: left
 :toc-title: Quick Start Reference Deployment
 :toclevels: 2
 
 
-== About this guide
-include::{includedir}/common/about_this_guide.adoc[]
-
 == Overview
-include::{includedir}/common/overview.adoc[]
+include::{includedir}/overview.adoc[]
 
-== Quick Links
-include::{includedir}/common/quicklink.adoc[]
+== Software on AWS
+include::specfic/product_description.adoc[]
 
 == Cost
-include::{includedir}/common/cost.adoc[]
+include::{includedir}/cost.adoc[]
 
 == Architecture
-include::{includedir}/specfic/architecture.adoc[]
+include::specfic/architecture.adoc[]
 
-=== AWS Services
-include::{includedir}/generated/services.adoc[]
+== Planning the deployment
+include::specfic/planning_the_deployment.adoc[]
+
+== Specialized knowledge
+include::specfic/specialized_knowledge.adoc[]
 
 == Deployment Steps
 
@@ -35,19 +35,19 @@ Cloud from scratch.
 
 === Step 1 Prepare An AWS Account
 
-include::{includedir}/common/prepare_an_aws_ccount.adoc[]
+include::{includedir}/prepare_an_aws_ccount.adoc[]
 
 === Step 2 Launch the stack
-include::{includedir}/common/launch_the_stack.adoc[]
+include::{includedir}/launch_the_stack.adoc[]
 
 ==== Parameters
-include::{includedir}/generated/parameters.adoc[]
+include::generated/parameters.adoc[]
 
 === Troubleshoot
-include::{includedir}/common/troubleshoot.adoc[]
+include::{includedir}/troubleshoot.adoc[]
 
 === Security
-include::{includedir}/common/security.adoc[]
+include::{includedir}/security.adoc[]
 
 
 *Quick Start reference deployments*
