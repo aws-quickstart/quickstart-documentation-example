@@ -40,8 +40,13 @@ include::{includedir}/prepare_an_aws_ccount.adoc[]
 === Step 2 Launch the stack
 include::{includedir}/launch_the_stack.adoc[]
 
-==== Parameters
-include::generated/parameters.adoc[]
+=== Parameters
+
+== Master
+include::generated/master.template.adoc[]
+
+== Workload
+include::generated/workload.template.adoc[]
 
 === Troubleshoot
 include::{includedir}/troubleshoot.adoc[]
