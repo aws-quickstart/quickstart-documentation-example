@@ -18,7 +18,7 @@ def get_cfn(file_name):
         return _decoded
 
 
-for yaml_cfn_file in Path('../../templates').glob('*.yaml'):
+for yaml_cfn_file in Path('./templates').glob('*.yaml'):
     print(f"Working on {yaml_cfn_file}")
     template = get_cfn(Path(yaml_cfn_file))
     print(template)
