@@ -23,7 +23,7 @@ for yaml_cfn_file in Path('./templates').glob('*.yaml'):
     template = get_cfn(Path(yaml_cfn_file))
     print(template)
     _pf = Path(yaml_cfn_file).stem + ".adoc"
-    p_file = f"../generated/{_pf}"
+    p_file = f"docs/generated/{_pf}"
 
     label_mappings = {}
     reverse_label_mappings = {}
@@ -75,5 +75,5 @@ for yaml_cfn_file in Path('./templates').glob('*.yaml'):
         writer.write_table()
 
         with open (p_file, 'a') as p:
-            print("Generating {p_file}")
+            print(f"Generating {p_file}")
             p.write(pypandoc.convert_text(writer.stream.getvalue(), 'asciidoc', format='markdown'))
