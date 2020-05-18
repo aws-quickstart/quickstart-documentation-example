@@ -122,7 +122,6 @@ Metadata:
           - PublicSubnet2ID
           - PrivateSubnet1ID
           - PrivateSubnet2ID
-          - EC2SecurityGroupID
           - BastionSecurityGroupID
       -
         Label:
@@ -210,8 +209,6 @@ Metadata:
         default: Molecule cluster name
       SSLCertificateArn:
         default: SSL certificate ARN
-      EC2SecurityGroupID:
-        default: EC2 Security Group ID
       BastionSecurityGroupID:
         default: Bastion security group ID
 Mappings:
