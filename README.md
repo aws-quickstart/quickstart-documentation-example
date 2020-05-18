@@ -1,3 +1,5 @@
+![main-documentation](https://github.com/aws-quickstart/quickstart-documentation-base/workflows/main-documentation/badge.svg)
+
 **This folder contains the base structure for AWS QuickStarts (New Repos will be auto populated with this structure**
 
 ## Docs 
