@@ -26,7 +26,11 @@ jobs:
       run: |
            sudo apt-get install pandoc -y
            pip3 install -r docs/.utils/requirements.txt
+           echo "preapre to generate docs"
+           rm -rf ../docs/generated/*
            docs/.utils/generate_parms.py
+           echo "generated docs:"
+           ls -l ../docs/generated
     - name: Build documentation
       id: adoc
       uses: avattathil/asciidoctor-action@master
