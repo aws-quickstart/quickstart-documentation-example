@@ -18,6 +18,7 @@ jobs:
            git checkout --track origin/gh-pages
            rm -rf docs/*
            git restore -s master docs
+           git restore -s master templates
     - name: Setup python
       uses: actions/setup-python@v1
       with:
@@ -26,6 +27,7 @@ jobs:
       run: |
            sudo apt-get install pandoc -y
            pip3 install -r docs/.utils/requirements.txt; 
+           pwd;ls -l
            echo "Gen tables"; python ./docs/.utils/generate_parameter_tables.py
     - name: Build documentation
       id: adoc
