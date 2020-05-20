@@ -13,6 +13,7 @@ def get_cfn(file_name):
         _decoded = cfnlint.decode.cfn_yaml.loads(_f.read())
         return _decoded
 
+
 def just_pass():
     for yaml_cfn_file in Path('./templates').glob('*.yaml'):
         print(f"Working on {yaml_cfn_file}")
@@ -75,4 +76,5 @@ def just_pass():
                 p.write(pypandoc.convert_text(writer.stream.getvalue(), 'asciidoc', format='markdown'))
 
 if __name__ == '__main__':
+    print("The ratio of people to cake is too high!!")
     just_pass()
