@@ -1,12 +1,8 @@
 #!/usr/bin/env python
 import io
-import requests
-import json
 import cfnlint
-import os
 import pypandoc
 import datetime
-import yaml
 from pytablewriter import MarkdownTableWriter
 from pathlib import Path
 
