@@ -1,6 +1,14 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: >-
-   WebServer, NGINX in ASG behind ALB, License:
+Description: 'WebServer, NGINX in ASG behind ALB, License: Apache 2.0'
+Metadata:
+  AWS::CloudFormation::Interface:
+    ParameterLabels:
+      KeyPairName:
+        default: SSH key name
+      EmailAddress:
+        default: Notification Email 
+      WebserverCIDR:
+        default: Webserver Access CIDR 
 Parameters:
   InstanceType:
     Description: EC2 instance type

@@ -39,7 +39,7 @@ Metadata:
         default: Notification Email 
       WebserverCIDR:
         default: Webserver Access CIDR 
-        PrivateSubnet1CIDR:
+      PrivateSubnet1CIDR:
         default: Subnet CIDR
 Parameters:
   AvailabilityZones:
