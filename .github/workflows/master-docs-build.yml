@@ -22,11 +22,10 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.7.7
-    - name: install dependencies
+    - name: generate parameter tables
       run: |
            sudo apt-get install pandoc -y
-           pip3 install -r docs/.utils/requirements.txt
-           ./docs/.utils/generate_parameter_tables.py
+           pip3 install -r docs/.utils/requirements.txt; ./docs/.utils/generate_parameter_tables.py
     - name: Build documentation
       id: adoc
       uses: avattathil/asciidoctor-action@master

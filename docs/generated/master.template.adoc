@@ -1,1 +1,63 @@
-<STUB>
+IMPORTANT: Last Change to input parameters on: 2020-05-20 11:14:05
+
+== Network configuration
+
+[width="100%",cols="23%,8%,69%",options="header",]
+|===
+|Parameter label (name) |Default |Description
+|**List of Availability Zones**(`AvailabilityZones`) |**Requires Input**
+|List of Availability Zones to use for the subnets in the VPC. Only two
+Availability Zones are used for this deployment, and the logical order
+of your selections is preserved.
+
+|**Subnet CIDR**(`PrivateSubnet1CIDR`) |10.0.0.0/19 |CIDR block for
+private subnet 1 located in Availability Zone 1
+
+|**NO_LABEL**(`PrivateSubnet2CIDR`) |10.0.32.0/19 |CIDR block for
+private subnet 2 located in Availability Zone 2
+
+|**NO_LABEL**(`PublicSubnet1CIDR`) |10.0.128.0/20 |CIDR block for the
+public (DMZ) subnet 1 located in Availability Zone 1
+
+|**NO_LABEL**(`PublicSubnet2CIDR`) |10.0.144.0/20 |CIDR block for the
+public (DMZ) subnet 2 located in Availability Zone 2
+
+|**NO_LABEL**(`VPCCIDR`) |10.0.0.0/16 |CIDR block for the VPC
+|===
+== Amazon EC2 configuration
+
+[width="100%",cols="21%,12%,67%",options="header",]
+|===
+|Parameter label (name) |Default |Description
+|**SSH key name**(`KeyPairName`) |**Requires Input** |The name of an
+existing public/private key pair, which allows you to securely connect
+to your instance after it launches
+
+|**NO_LABEL**(`InstanceType`) |t2.medium |EC2 instance type
+|===
+== Workload Parameters
+
+[width="100%",cols="43%,20%,37%",options="header",]
+|===
+|Parameter label (name) |Default |Description
+|**Webserver Access CIDR**(`WebserverCIDR`) |**Requires Input** |Allowed
+CIDR block for webserver access
+
+|**Notification Email**(`EmailAddress`) |**Requires Input** |Email
+Address for notification
+|===
+== Quick Start configuration
+
+[width="100%",cols="16%,12%,72%",options="header",]
+|===
+|Parameter label (name) |Default |Description
+|**NO_LABEL**(`QSS3BucketName`) |aws-quickstart |S3 bucket name for the
+Quick Start assets. This string can include numbers, lowercase letters,
+uppercase letters, and hyphens (-). It cannot start or end with a hyphen
+(-).
+
+|**NO_LABEL**(`QSS3KeyPrefix`) |quickstart-documentation-base/ |S3 key
+prefix for the Quick Start assets. Quick Start key prefix can include
+numbers, lowercase letters, uppercase letters, hyphens (-), and forward
+slash (/).
+|===
