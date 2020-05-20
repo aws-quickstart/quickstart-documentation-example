@@ -2,6 +2,25 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: 'WebServer, NGINX in ASG behind ALB, License: Apache 2.0'
 Metadata:
   AWS::CloudFormation::Interface:
+    ParameterGroups:
+      -
+        Label:
+          default: "Amazon EC2 configuration"
+        Parameters:
+          - KeyPairName
+          - InstanceType
+      -
+        Label:
+          default: "Workload Parameters"
+        Parameters:
+          - WebserverCIDR
+          - EmailAddress
+      -
+        Label:
+          default: "Quick Start configuration"
+        Parameters:
+          - QSS3BucketName
+          - QSS3KeyPrefix
     ParameterLabels:
       KeyPairName:
         default: SSH key name
