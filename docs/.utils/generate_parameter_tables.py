@@ -18,7 +18,6 @@ def just_pass():
     for yaml_cfn_file in Path('./templates').glob('*.yaml'):
         print(f"Working on {yaml_cfn_file}")
         template = get_cfn(Path(yaml_cfn_file))
-        print(template)
         _pf = Path(yaml_cfn_file).stem + ".adoc"
         p_file = f"docs/generated/{_pf}"
 
@@ -71,10 +70,12 @@ def just_pass():
                 ])
             writer.write_table()
 
-            with open (p_file, 'a') as p:
-                print(f"Generating {p_file}")
-                p.write(pypandoc.convert_text(writer.stream.getvalue(), 'asciidoc', format='markdown'))
+        with open (p_file, 'a') as p:
+            print(f"Generating {p_file}")
+            p.write(pypandoc.convert_text(writer.stream.getvalue(), 'asciidoc', format='markdown'))
 
 if __name__ == '__main__':
-    print("The ratio of people to cake is too high!!")
+    print("Milton, don't be greedy. Let's pass it along and make sure everyone gets a piece.")
+    print("Can I keep a piece, because last time I was told that...")
+    print("Just pass.")
     just_pass()
