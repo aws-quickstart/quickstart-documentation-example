@@ -1,4 +1,4 @@
-= Quick Start title
+= Quick Start Base
 :imagesdir: images
 :includedir: common
 :icons: font
@@ -8,7 +8,7 @@
 
 
 == Overview
-include::{includedir}/overview.adoc[]
+include::https://raw.githubusercontent.com/aws-quickstart/quickstart-documentation-base/master/docs/common/overview.adoc[]
 
 == Software on AWS
 include::specfic/product_description.adoc[]
