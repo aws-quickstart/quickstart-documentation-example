@@ -26,8 +26,7 @@ jobs:
       run: |
            sudo apt-get install pandoc -y
            pip3 install -r docs/.utils/requirements.txt
-           exit 1
-           python docs/.utils/generate_parameter_tables.py
+           ./docs/.utils/generate_parameter_tables.py
     - name: Build documentation
       id: adoc
       uses: avattathil/asciidoctor-action@master
