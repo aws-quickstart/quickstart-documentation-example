@@ -3,6 +3,6 @@ instructions for deploying <software> on the AWS Cloud.
 
 This Quick Start is for users who <target audience and usage scenario>.
 
-NOTE: lease know that we may share who uses AWS
+NOTE: Please know that we may share who uses AWS
 Quick Starts with the AWS Partner Network (APN) Partner that
 collaborated with AWS on the content of the Quick Start.

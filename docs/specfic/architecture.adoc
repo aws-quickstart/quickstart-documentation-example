@@ -1,3 +1,6 @@
+
+* _This portion of the deployment guide is located at `docs/specific/architecture.adoc_`
+
 Deploying this Quick Start for a new virtual private cloud (VPC) with
 *default parameters* builds the following <software> environment in the
 AWS Cloud.
@@ -25,8 +28,3 @@ Shell (SSH) access to EC2 instances in public and private subnets.*
 *** The template that deploys the Quick Start into an existing VPC skips
 the components marked by asterisks and prompts you for your existing VPC
 configuration.
-
-== Planning the deployment
-
-=== Specialized knowledge
-
