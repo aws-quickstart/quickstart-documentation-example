@@ -1,6 +1,10 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: 'WebServer, NGINX in ASG behind ALB, License: Apache 2.0'
 Metadata:
+  Documentation:
+    EntrypointName: "Launch into an existing VPC"
+    OptionalParameters:
+      - EmailAddress
   AWS::CloudFormation::Interface:
     ParameterGroups:
       -
