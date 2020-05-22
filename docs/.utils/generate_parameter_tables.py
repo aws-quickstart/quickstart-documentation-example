@@ -1,25 +1,41 @@
 #!/usr/bin/env python
 import io
 import cfnlint
-import pypandoc
 import datetime
-from pytablewriter import MarkdownTableWriter
 from pathlib import Path
 
 
-def get_cfn(file_name):
-    print(file_name)
-    with open(file_name, encoding="utf8", errors='ignore') as _f:
-        _decoded = cfnlint.decode.cfn_yaml.loads(_f.read())
-        return _decoded
+def get_cfn(filename):
+    _decoded = cfnlint.decode.decode(filename, False)[0]
+    return _decoded
 
+def _generate_table_name_and_header(label_name):
+    data = []
+    data.append(f"\n.{label_name}")
+    data.append('[width="100%",cols="16%,11%,73%",options="header",]')
+    data.append("|===")
+    data.append("|Parameter label (name) |Default Value|Description")
+    return "\n".join(data)
+
+def _generate_per_label_table_entry(label, param, default, description):
+    data = []
+    if not label:
+        label = "**NO_LABEL**"
+    data.append(f"|{label}")
+    data.append(f"(`{param}`)|`{default}`|{description}")
+    return '\n'.join(data)
 
 def just_pass():
+    template_entrypoints = {}
     for yaml_cfn_file in Path('./templates').glob('*.yaml'):
         print(f"Working on {yaml_cfn_file}")
         template = get_cfn(Path(yaml_cfn_file))
         _pf = Path(yaml_cfn_file).stem + ".adoc"
-        p_file = f"docs/generated/{_pf}"
+        p_file = f"docs/generated/parameters/{_pf}"
+
+        entrypoint = template['Metadata'].get('Documentation',{}).get('EntrypointName')
+        if entrypoint:
+            template_entrypoints[p_file.split('/')[-1]] = entrypoint
 
         label_mappings = {}
         reverse_label_mappings = {}
@@ -28,7 +44,7 @@ def just_pass():
         no_groups = {}
 
         def determine_optional_value(param):
-            optional = template['Metadata'].get('OptionalParams')
+            optional = template['Metadata'].get('Documentation', {}).get('OptionalParameters')
             if optional and (param in optional):
                 return '__Optional__'
             return '**__Requires Input__**'
@@ -48,34 +64,35 @@ def just_pass():
             if not reverse_label_mappings.get(label_name):
                 no_groups[label_name] = label_data
 
-        with open(p_file, 'w') as new_params_file :
-            _nl = '\n'
-            _now = datetime.datetime.now()
-            _ts_now=_now.strftime("%Y-%m-%d %H:%M:%S")
-            new_params_file.write(f'IMPORTANT: Last Change to input parameters on: {_ts_now}{_nl}{_nl}')
-
-
+        adoc_data = ""
         for label_name, label_params in label_mappings.items():
-            writer = MarkdownTableWriter()
-            writer.table_name = label_name
-            writer.headers = ["Parameter label (name)", "Default", "Description"]
-            writer.value_matrix = []
-            writer.stream = io.StringIO()
-            for lparam in label_params:
-                writer.set_indent_level(4)
-                writer.value_matrix.append([
-                f"**{str(parameter_labels.get(lparam, 'NO_LABEL'))}**<br>(`{lparam}`)",
-                str(parameter_mappings[lparam].get('Default', determine_optional_value(lparam))),
-                str(parameter_mappings[lparam].get('Description', 'NO_DESCRIPTION'))
-                ])
-            writer.write_table()
+            header = _generate_table_name_and_header(label_name)
+            adoc_data += header
 
-        with open (p_file, 'a') as p:
-            print(f"Generating {p_file}")
-            p.write(pypandoc.convert_text(writer.stream.getvalue(), 'asciidoc', format='markdown'))
+            for lparam in label_params:
+                param_data = _generate_per_label_table_entry(
+                        parameter_labels.get(lparam, ''),
+                        lparam,
+                        parameter_mappings[lparam].get('Default', determine_optional_value(lparam)),
+                        parameter_mappings[lparam].get('Description', 'NO_DESCRIPTION')
+                )
+                adoc_data += param_data
+            adoc_data += "\n|==="
+
+        print(f"- Generating: {p_file}")
+        with open (p_file, 'w') as p:
+            p.write(adoc_data)
+
+    with open('docs/generated/parameters/index.adoc', 'w') as f:
+        for template_file, cosmetic_name in template_entrypoints.items():
+            f.write(f"\n=== {cosmetic_name}\n")
+            f.write(f"include::{template_file}[]\n")
 
 if __name__ == '__main__':
-    print("Milton, don't be greedy. Let's pass it along and make sure everyone gets a piece.")
-    print("Can I keep a piece, because last time I was told that...")
-    print("Just pass.")
+    print("---")
+    print("> Milton, don't be greedy. Let's pass it along and make sure everyone gets a piece.")
+    print("> Can I keep a piece, because last time I was told that...")
+    print("> Just pass.")
+    print("---")
     just_pass()
+    print("---")
