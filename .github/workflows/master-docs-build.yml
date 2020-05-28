@@ -18,20 +18,22 @@ jobs:
            git checkout --track origin/gh-pages
            rm -rf docs/*
            git restore -s master docs
+           git restore -s master templates
     - name: Setup python
       uses: actions/setup-python@v1
       with:
         python-version: 3.7.7
-    - name: install dependencies
+    - name: generate parameter tables
       run: |
            sudo apt-get install pandoc -y
-           pip3 install -r docs/.utils/requirements.txt
-           python docs/.utils/generate_parameter_tables.py
+           pip3 install -r docs/.utils/requirements.txt; 
+           pwd;ls -l
+           echo "Gen tables"; python ./docs/.utils/generate_parameter_tables.py
     - name: Build documentation
       id: adoc
       uses: avattathil/asciidoctor-action@master
       with:
-          program: "asciidoctor --backend=html5 -o index.html -a toc2 docs/index.adoc"
+          program: "asciidoctor --backend=html5 -o index.html -a allow-uri-read --doctype=book -a toc2 docs/index.adoc"
     - name: Stage changes gh-pages
       run: |
         git config --local user.email "action@github.com"

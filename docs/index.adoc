@@ -1,4 +1,4 @@
-= Quick Start title
+= Quick Start Base
 :imagesdir: images
 :includedir: common
 :specificdir: specific
@@ -57,7 +57,7 @@ include::{includedir}/troubleshoot.adoc[]
 include::{includedir}/security.adoc[]
 
 
-*Quick Start reference deployments*
+== Quick Start reference deployments
 
 * AWS Quick Start home page +
 https://aws.amazon.com/quickstart/

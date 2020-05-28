@@ -1,4 +1,48 @@
 AWSTemplateFormatVersion: 2010-09-09
+Metadata:
+  Documentation:
+    EntrypointName: "Launch into a new VPC"
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      -
+        Label:
+          default: "Network configuration"
+        Parameters:
+          - AvailabilityZones
+          - PrivateSubnet1CIDR
+          - PrivateSubnet2CIDR
+          - PublicSubnet1CIDR
+          - PublicSubnet2CIDR
+          - VPCCIDR
+      -
+        Label:
+          default: "Amazon EC2 configuration"
+        Parameters:
+          - KeyPairName
+          - InstanceType
+      -
+        Label:
+          default: "Workload Parameters"
+        Parameters:
+          - WebserverCIDR
+          - EmailAddress
+      -
+        Label:
+          default: "Quick Start configuration"
+        Parameters:
+          - QSS3BucketName
+          - QSS3KeyPrefix
+    ParameterLabels:
+      AvailabilityZones:
+        default: List of Availability Zones 
+      KeyPairName:
+        default: SSH key name
+      EmailAddress:
+        default: Notification Email 
+      WebserverCIDR:
+        default: Webserver Access CIDR 
+      PrivateSubnet1CIDR:
+        default: Subnet CIDR
 Parameters:
   AvailabilityZones:
     Description: >-

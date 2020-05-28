@@ -1,6 +1,37 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: >-
-   WebServer, NGINX in ASG behind ALB, License:
+Description: 'WebServer, NGINX in ASG behind ALB, License: Apache 2.0'
+Metadata:
+  Documentation:
+    EntrypointName: "Launch into an existing VPC"
+    OptionalParameters:
+      - EmailAddress
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      -
+        Label:
+          default: "Amazon EC2 configuration"
+        Parameters:
+          - KeyPairName
+          - InstanceType
+      -
+        Label:
+          default: "Workload Parameters"
+        Parameters:
+          - WebserverCIDR
+          - EmailAddress
+      -
+        Label:
+          default: "Quick Start configuration"
+        Parameters:
+          - QSS3BucketName
+          - QSS3KeyPrefix
+    ParameterLabels:
+      KeyPairName:
+        default: SSH key name
+      EmailAddress:
+        default: Notification Email 
+      WebserverCIDR:
+        default: Webserver Access CIDR 
 Parameters:
   InstanceType:
     Description: EC2 instance type
