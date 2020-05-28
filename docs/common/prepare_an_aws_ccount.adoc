@@ -1,1 +1,1 @@
-Addd Steps here
+_Add content surrounding preparing an AWS account here_

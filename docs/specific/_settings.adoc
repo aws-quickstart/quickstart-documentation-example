@@ -1,0 +1,2 @@
+:partner-product-name: Example Product Name
+:partner-company-name: Example Company Name, Ltd.

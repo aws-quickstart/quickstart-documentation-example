@@ -1,29 +1,36 @@
 = Quick Start title
 :imagesdir: images
 :includedir: common
+:specificdir: specific
+:generateddir: generated
 :icons: font
 :toc2: left
 :toc-title: Quick Start Reference Deployment
 :toclevels: 2
+:quickstart-project-name: quickstart-documentation-base
+include::{specificdir}/_settings.adoc[]
 
 
 == Overview
 include::{includedir}/overview.adoc[]
 
-== Software on AWS
-include::specfic/product_description.adoc[]
+== _{partner-product-name}_ on AWS
+include::{specificdir}/product_description.adoc[]
 
 == Cost
 include::{includedir}/cost.adoc[]
 
+== Software Licenses
+include::{specificdir}/licenses.adoc[]
+
 == Architecture
-include::specfic/architecture.adoc[]
+include::{specificdir}/architecture.adoc[]
 
 == Planning the deployment
-include::specfic/planning_the_deployment.adoc[]
+include::{specificdir}/planning_the_deployment.adoc[]
 
-== Specialized knowledge
-include::specfic/specialized_knowledge.adoc[]
+=== Specialized knowledge
+include::{specificdir}/specialized_knowledge.adoc[]
 
 == Deployment Steps
 
@@ -40,18 +47,13 @@ include::{includedir}/prepare_an_aws_ccount.adoc[]
 === Step 2 Launch the stack
 include::{includedir}/launch_the_stack.adoc[]
 
-=== Parameters
+== Parameters
+include::{generateddir}/parameters/index.adoc[]
 
-== Master
-include::generated/master.template.adoc[]
-
-== Workload
-include::generated/workload.template.adoc[]
-
-=== Troubleshoot
+== Troubleshooting
 include::{includedir}/troubleshoot.adoc[]
 
-=== Security
+== Security
 include::{includedir}/security.adoc[]
 
 
@@ -62,11 +64,6 @@ https://aws.amazon.com/quickstart/
 
 == GitHub Repository
 
-You can visit our [GitHub repository] to download
+You can visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository] to download
 the templates and scripts for this Quick Start, to post your comments,
 and to share your customizations with others.
-
-== Document Revisions
-
-TIP: See releases in git https://github.com/aws-quickstart/replace-with-quickstart-name/releases
-n

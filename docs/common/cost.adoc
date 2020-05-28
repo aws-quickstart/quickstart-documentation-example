@@ -1,7 +1,7 @@
 
 You are responsible for the cost of the AWS services used while running
 this Quick Start reference deployment. There is no additional cost for
-using the Quick Start.
+using the Quick Start. Costs may incur from _{partner-company-name}_ for utilization of _{partner-product-name}_
 
 The AWS CloudFormation template for this Quick Start includes
 configuration parameters that you can customize. Some of the settings,
