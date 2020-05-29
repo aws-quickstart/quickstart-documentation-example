@@ -4,4 +4,5 @@
 :doc-month: May
 :doc-year: 2020
 :partner-contributors: John Doe and Jane Doe
-:quickstart-contributors: AWS SA
+:quickstart-contributors: Jim Smith - AWS Global Partner SA, AWS + \
+Joe Jones - Technical Product Manager, AWS

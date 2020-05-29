@@ -1,13 +1,13 @@
+[.text-center]
 == Quick Start Reference Deployment
-//[.text-center]
-{doc-month} {doc-year} +
-{partner-contributors}, {partner-company-name} +
-{quickstart-contributors}, AWS Quick Start team
+*{doc-month}, {doc-year}* +
+// _{author}_
+_{partner-contributors} - {partner-company-name}_ +
+_{quickstart-contributors}_
+[.text-left]
+ifndef::in_repo[_**The above information is configured within `{specificdir}/_settings.adoc`**_]
 
-____
-Visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository] for source files and to post feedback, 
+TIP: Visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository] for source files and to post feedback,
 report bugs, or submit feature ideas for this Quick Start.
-____
-
-This Quick Start was created by {partner-company-name} in collaboration with Amazon Web Services (AWS). +
-http://aws.amazon.com/quickstart/[Quick Starts] are automated reference deployments that use AWS CloudFormation templates to deploy key technologies on AWS, following AWS best practices. 
+[.text-left]
+This Quick Start was created by _{partner-company-name}_ in collaboration with Amazon Web Services (AWS). http://aws.amazon.com/quickstart/[Quick Starts] are automated reference deployments that use AWS CloudFormation templates to deploy key technologies on AWS, following AWS best practices.

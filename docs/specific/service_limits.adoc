@@ -1,5 +1,4 @@
 // Replace the <n> in each row to specify the number of resources used in this deployment. Remove the rows for resources that aren’t used.
-[cols=",",options="header",]
 |===
 |Resource |This deployment uses
 |VPCs |<n>

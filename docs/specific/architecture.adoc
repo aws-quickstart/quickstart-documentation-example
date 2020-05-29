@@ -1,6 +1,3 @@
-
-* _This portion of the deployment guide is located at `docs/specific/architecture.adoc_`
-
 Deploying this Quick Start for a new virtual private cloud (VPC) with
 *default parameters* builds the following _{partner-product-name}_ environment in the
 AWS Cloud.
