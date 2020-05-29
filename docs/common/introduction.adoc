@@ -1,7 +1,6 @@
 [.text-center]
 == Quick Start Reference Deployment
 *{doc-month}, {doc-year}* +
-// _{author}_
 _{partner-contributors} - {partner-company-name}_ +
 _{quickstart-contributors}_
 [.text-left]
