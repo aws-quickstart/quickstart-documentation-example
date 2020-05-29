@@ -4,13 +4,16 @@
 :generateddir: generated
 :icons: font
 :toc2: left
-:toc-title: Quick Start Reference Deployment
+// :toc-title: Quick Start Reference Deployment
 :toclevels: 2
+:stylesheet: css/quickstart.css
 :template_services_ec2:
 include::{specificdir}/_settings.adoc[]
 
 [.text-center]
+[discrete]
 == _{partner-product-name}_ on the AWS Cloud
+:!toc:
 [.text-left]
 include::{includedir}/introduction.adoc[]
 
