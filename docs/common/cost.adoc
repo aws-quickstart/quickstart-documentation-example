@@ -15,3 +15,5 @@ Calculator].
 For pricing details, see the https://aws.amazon.com/ec2/pricing/[Amazon
 EC2 pricing] and https://aws.amazon.com/vpc/pricing/[Amazon VPC pricing]
 pages.
+
+TIP: After you deploy the Quick Start, we recommend that you enable the https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-gettingstarted-turnonreports.html[AWS Cost and Usage Report]. This report delivers billing metrics to an Amazon Simple Storage Service (Amazon S3) bucket in your account. It provides cost estimates based on usage throughout each month and finalizes the data at the end of the month. For more information about the report, see the https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-costusage.html[AWS documentation].
