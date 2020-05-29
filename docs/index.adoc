@@ -1,4 +1,4 @@
-= Quick Start Base
+
 :imagesdir: images
 :includedir: common
 :specificdir: specific
@@ -7,9 +7,12 @@
 :toc2: left
 :toc-title: Quick Start Reference Deployment
 :toclevels: 2
-:quickstart-project-name: quickstart-documentation-base
+//:quickstart-project-name: quickstart-documentation-base
 include::{specificdir}/_settings.adoc[]
 
+
+== _{partner-product-name}_ on the AWS Cloud
+include::{includedir}/introduction.adoc[]
 
 == Overview
 include::{includedir}/overview.adoc[]
@@ -27,10 +30,10 @@ include::{specificdir}/licenses.adoc[]
 include::{specificdir}/architecture.adoc[]
 
 == Planning the deployment
-include::{specificdir}/planning_the_deployment.adoc[]
 
 === Specialized knowledge
 include::{specificdir}/specialized_knowledge.adoc[]
+include::{includedir}/planning_deployment.adoc[]
 
 == Deployment Steps
 

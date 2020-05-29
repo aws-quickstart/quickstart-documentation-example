@@ -5,6 +5,7 @@ Deploying this Quick Start for a new virtual private cloud (VPC) with
 *default parameters* builds the following _{partner-product-name}_ environment in the
 AWS Cloud.
 
+// Replace this example diagram with your own. Send us your source PowerPoint file. Be sure to follow our guidelines here : http://(we should include these points on our contributors giude)
 image:../images/architecture_diagram.png[image,width=648,height=439]
 
 Figure 1: Quick Start architecture for _{partner-product-name}_ on AWS
@@ -23,7 +24,7 @@ internet access for resources in the private subnets.*
 Shell (SSH) access to EC2 instances in public and private subnets.*
 
 In the private subnets:
-
+// Add bullet points for any additional components that are included in the deployment. Make sure that the additional components are also represented in the architecture diagram.
 * <describe any additional components>.
 
 *** The template that deploys the Quick Start into an existing VPC skips
