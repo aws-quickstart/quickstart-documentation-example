@@ -19,6 +19,8 @@ jobs:
            rm -rf docs/*
            git restore -s master docs
            git restore -s master templates
+           git restore -s master .gitmodules
+           git submodule update docs/common
     - name: Setup python
       uses: actions/setup-python@v1
       with:
