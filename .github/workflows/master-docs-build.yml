@@ -24,7 +24,7 @@ jobs:
       run: ./docs/common/.utils/generate_dynamic_content.sh
     - name: Build documentation
       id: adoc
-      uses: avattathil/asciidoctor-action@master
+      uses: tonynv/asciidoctor-action@master
       with:
         program: "./docs/common/.utils/build_docs.sh"
     - name: Stage and Push changes to gh-pages branch.
