@@ -11,41 +11,19 @@ jobs:
     steps:
     - name: Checkout (master)
       uses: actions/checkout@v2
-    - name: Get new doc updates 
+    - name: Get new doc updates
       run: |
-           git remote update
-           git fetch
-           git checkout --track origin/gh-pages
-           rm -rf docs/*
-           git restore -s master docs
-           git rm -r docs/common -r
-           git restore -s master templates
-           git submodule add https://github.com/aws-quickstart/quickstart-documentation-base-common.git docs/common
+           wget https://https://raw.githubusercontent.com/aws-quickstart/quickstart-documentation-base-common/master/.utils/configure_git_env.sh
+           ./configure_git_env.sh
     - name: Setup python
       uses: actions/setup-python@v1
       with:
         python-version: 3.7.7
-    - name: generate parameter tables
-      run: |
-           sudo apt-get install pandoc -y
-           pip3 install -r docs/.utils/requirements.txt; 
-           pwd
-           ls -l docs/
-           ls -l docs/common/
-           echo "Gen tables"; python ./docs/.utils/generate_parameter_tables.py
+    - name: Generate dynamic content.
+      run: ./docs/common/.utils/generate_dynamic_content.sh
     - name: Build documentation
       id: adoc
       uses: avattathil/asciidoctor-action@master
-      with:
-          program: "asciidoctor --backend=html5 -o index.html -a allow-uri-read --doctype=book -a toc2 docs/index.adoc"
-    - name: Stage changes gh-pages
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add -A
-        git commit -a -m "Updating documentation"
-    - name: Push updates to gh-pages
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GH_TOKEN }}
-        branch: gh-pages
+      run: ./docs/common/.utils/build_docs.sh
+    - name: Stage and Push changes to gh-pages branch.
+      run: ./docs/common/.utils/commit_and_push_to_ghpages.sh
