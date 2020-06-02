@@ -21,7 +21,7 @@ jobs:
            git restore -s master templates
            git restore -s master .gitmodules
            git submodule init
-           git submodule update docs/common
+           git submodule update --remote docs/common
     - name: Setup python
       uses: actions/setup-python@v1
       with:
