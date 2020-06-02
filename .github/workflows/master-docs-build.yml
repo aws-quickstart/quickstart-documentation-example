@@ -30,7 +30,9 @@ jobs:
       run: |
            sudo apt-get install pandoc -y
            pip3 install -r docs/.utils/requirements.txt; 
-           pwd;ls -l docs/
+           pwd
+           ls -l docs/
+           ls -l docs/common/
            echo "Gen tables"; python ./docs/.utils/generate_parameter_tables.py
     - name: Build documentation
       id: adoc
