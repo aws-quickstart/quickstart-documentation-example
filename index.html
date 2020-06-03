@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<title>Overview</title>
+<title>Quick Start Reference Deployment</title>
 <style>
 
 
@@ -477,6 +477,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
+<li><a href="#_quick_start_reference_deployment">Quick Start Reference Deployment</a></li>
 <li><a href="#_overview">Overview</a></li>
 <li><a href="#_example_product_name_on_aws"><em>Example Product Name</em> on AWS</a></li>
 <li><a href="#_cost">Cost</a></li>
@@ -494,16 +495,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_step_1_sign_in_to_your_aws_account">Step 1. Sign in to your AWS account</a></li>
 <li><a href="#_step_2_subscribe_to_the_example_product_name_ami">Step 2. Subscribe to the Example Product Name AMI</a></li>
 <li><a href="#_step_3_launch_the_quick_start">Step 3. Launch the Quick Start</a></li>
-</ul>
-</li>
-<li><a href="#_parameters">Parameters</a>
-<ul class="sectlevel2">
 <li><a href="#_launch_into_an_existing_vpc">Launch into an existing VPC</a></li>
 <li><a href="#_launch_into_a_new_vpc">Launch into a new VPC</a></li>
+<li><a href="#_step_4_test_the_deployment">Step 4. Test the deployment</a></li>
 </ul>
 </li>
-<li><a href="#_faq">FAQ</a></li>
-<li><a href="#_troubleshooting">Troubleshooting</a></li>
 <li><a href="#_send_us_feedback">Send us feedback</a></li>
 <li><a href="#_quick_start_reference_deployments">Quick Start reference deployments</a></li>
 <li><a href="#_github_repository">GitHub Repository</a></li>
@@ -516,7 +512,40 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_example_product_name_on_the_aws_cloud" class="discrete text-center"><em>Example Product Name</em> on the AWS Cloud</h2>
 </div>
 </div>
-<div class="sect1 text-left">
+<div class="sect1 text-left text-center">
+<h2 id="_quick_start_reference_deployment">Quick Start Reference Deployment</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>May, 2020</strong><br>
+<em>John Doe and Jane Doe - Example Company Name, Ltd.</em><br>
+<em>Jim Smith - AWS Global Partner SA, AWS + Joe Jones - Technical Product Manager, AWS</em></p>
+</div>
+</div>
+</div>
+<div class="paragraph text-left">
+<p><em><strong>The above information is configured within <code>specific/_settings.adoc</code></strong></em></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Visit our <a href="https://github.com/aws-quickstart/quickstart-documentation-base">GitHub repository</a> for source files and to post feedback,
+report bugs, or submit feature ideas for this Quick Start.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph text-left">
+<p>This Quick Start was created by <em>Example Company Name, Ltd.</em> in collaboration with Amazon Web Services (AWS). <a href="http://aws.amazon.com/quickstart/">Quick Starts</a> are automated reference deployments that use AWS CloudFormation templates to deploy key technologies on AWS, following AWS best practices.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_overview">Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -575,17 +604,9 @@ using the Quick Start.</p>
 <div class="paragraph">
 <p>The AWS CloudFormation template for this Quick Start includes
 configuration parameters that you can customize. Some of the settings,
-such as the instance type, number of Availability Zones, use of NAT
-gateways or NAT instances (depending on the AWS Region you choose), and
-amount of data that flows through the NAT device, will determine the
-cost of deployment. To get an estimate, you can use the
-<a href="http://calculator.s3.amazonaws.com/index.html">AWS Simple Monthly
-Calculator</a>.</p>
-</div>
-<div class="paragraph">
-<p>For pricing details, see the <a href="https://aws.amazon.com/ec2/pricing/">Amazon
-EC2 pricing</a> and <a href="https://aws.amazon.com/vpc/pricing/">Amazon VPC pricing</a>
-pages.</p>
+such as the instance type, affect the cost of deployment. For cost estimates,
+see the pricing pages for each AWS service you will use. Prices are subject to change.
+To get an estimate, you can use the</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -680,14 +701,10 @@ Shell (SSH) access to EC2 instances in public and private subnets.*</p>
 <p>In the private subnets:
 * &lt;describe any additional components&gt;.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>The template that deploys the Quick Start into an existing VPC skips
+<div class="paragraph">
+<p>*The template that deploys the Quick Start into an existing VPC skips
 the components marked by asterisks and prompts you for your existing VPC
 configuration.</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -923,6 +940,11 @@ A confirmation page loads, and an email confirmation is sent to the account owne
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/_qs_deploy_links.adoc</code></strong></em></p>
+</div>
+<div class="exampleblock">
+<div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -936,6 +958,8 @@ A confirmation page loads, and an email confirmation is sent to the account owne
 </tr>
 </tbody>
 </table>
+</div>
+</div>
 <div class="paragraph">
 <p><strong>Important:</strong> If you’re deploying Example Product Name into an existing VPC, make sure that your VPC has two private subnets in different Availability Zones for the workload instances, and that the subnets aren’t shared. This Quick Start doesn’t support <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-sharing.html">shared subnets</a>. These subnets require <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html">NAT gateways</a> in their route tables, to allow the instances to download packages and software without exposing them to the internet.</p>
 </div>
@@ -943,12 +967,12 @@ A confirmation page loads, and an email confirmation is sent to the account owne
 <p>Also, make sure that the domain name option in the DHCP options is configured as explained in the <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html">Amazon VPC documentation</a>. You provide your VPC settings when you launch the Quick Start.</p>
 </div>
 <div class="paragraph">
-<p>Each deployment takes about &lt;x&gt; minutes to complete.</p>
+<p>Each deployment takes about 30 minutes / 1 hour to complete.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic" start="2">
 <li>
-<p>Check the AWS Region that’s displayed in the upper-right corner of the navigation bar, and change it if necessary. This is where the network infrastructure for Example Product Name will be built. The template is launched in the &lt;specify default AWS Region&gt; Region by default.</p>
+<p>Check the AWS Region that’s displayed in the upper-right corner of the navigation bar, and change it if necessary. This is where the network infrastructure for Example Product Name will be built. The template is launched in the us-east-1 Region by default.</p>
 </li>
 </ol>
 </div>
@@ -963,55 +987,22 @@ A confirmation page loads, and an email confirmation is sent to the account owne
 </ol>
 </div>
 <div class="paragraph">
-<p>In the following tables, parameters are listed by category and described separately for the two deployment options:</p>
+<p>In the following tables, parameters are listed by category and described separately for the deployment options. When you finish reviewing and customizing the parameters, choose <strong>Next</strong>.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Parameters for deploying Example Product Name into a new VPC</p>
-</li>
-<li>
-<p>Parameters for deploying Example Product Name into an existing VPC</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When you finish reviewing and customizing the parameters, choose <strong>Next</strong>.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="5">
-<li>
-<p>On the options page, you can <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html">specify tags</a> (key-value pairs) for resources in your stack and <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html">set advanced options</a>. When you’re done, choose <strong>Next</strong>.</p>
-</li>
-<li>
-<p>On the <strong>Review</strong> page, review and confirm the template settings. Under <strong>Capabilities</strong>, select the two check boxes to acknowledge that the template creates IAM resources and might require the ability to automatically expand macros.</p>
-</li>
-<li>
-<p>Choose <strong>Create stack</strong> to deploy the stack.</p>
-</li>
-<li>
-<p>Monitor the status of the stack. When the status is <strong>CREATE_COMPLETE</strong>, the Example Product Name cluster is ready.</p>
-</li>
-<li>
-<p>Use the URLs displayed in the <strong>Outputs</strong> tab for the stack, as shown in Figure 2, to view the resources that were created.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="images/cfn_outputs.png" alt="image" width="648" height="439"></span></p>
-</div>
-<div class="paragraph">
-<p>Figure 2: Example Product Name outputs after successful deployment</p>
-</div>
-<div class="paragraph">
-<p>&lt;Add instructions for testing the deployment.&gt;</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+We recommend keeping the default settings for the three parameters labled 'Quick Start S3 bucket name', 'Quick Start S3 bucket
+Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick Start templates for your own deployment projects. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For additional details, see the <a href="https://aws-quickstart.github.io/option1.html">AWS Quick Start Contributor’s Guide</a>.
+</td>
+</tr>
+</table>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_parameters">Parameters</h2>
-<div class="sectionbody">
 <div class="sect2">
 <h3 id="_launch_into_an_existing_vpc">Launch into an existing VPC</h3>
 <table class="tableblock frame-all grid-all stretch">
@@ -1244,6 +1235,37 @@ A confirmation page loads, and an email confirmation is sent to the account owne
 </tr>
 </tbody>
 </table>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>On the options page, you can <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html">specify tags</a> (key-value pairs) for resources in your stack and <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html">set advanced options</a>. When you’re done, choose <strong>Next</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Review</strong> page, review and confirm the template settings. Under <strong>Capabilities</strong>, select the two check boxes to acknowledge that the template creates IAM resources and might require the ability to automatically expand macros.</p>
+</li>
+<li>
+<p>Choose <strong>Create stack</strong> to deploy the stack.</p>
+</li>
+<li>
+<p>Monitor the status of the stack. When the status is <strong>CREATE_COMPLETE</strong>, the Example Product Name cluster is ready.</p>
+</li>
+<li>
+<p>Use the URLs displayed in the <strong>Outputs</strong> tab for the stack, as shown in Figure 2, to view the resources that were created.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/cfn_outputs.png" alt="image" width="648" height="439"></span></p>
+</div>
+<div class="paragraph">
+<p>Figure 2: Example Product Name outputs after successful deployment</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_4_test_the_deployment">Step 4. Test the deployment</h3>
+<div class="paragraph">
+<p>&lt;Add instructions for testing the deployment.&gt;</p>
+</div>
 <div class="paragraph">
 <p><em><strong>This portion of the deployment guide is located at <code>docs/specific/additional_info.adoc</code></strong></em></p>
 </div>
@@ -1269,17 +1291,14 @@ A confirmation page loads, and an email confirmation is sent to the account owne
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq">FAQ</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p><em><strong>This portion of the deployment guide is located at <code>docs/specific/faq.adoc</code></strong></em></p>
 </div>
 <div class="exampleblock">
 <div class="content">
+<div class="paragraph">
+<p>== FAQ</p>
+</div>
 <div class="paragraph">
 <p><strong>Q.</strong> I encountered a <strong>CREATE_FAILED</strong> error when I launched the Quick Start.</p>
 </div>
@@ -1298,20 +1317,12 @@ A confirmation page loads, and an email confirmation is sent to the account owne
 <div class="paragraph">
 <p><strong>A.</strong> We recommend that you launch the Quick Start templates from the links in this guide or from another S3 bucket. If you deploy the templates from a local copy on your computer or from a location other than an S3 bucket, you might encounter template size limitations. For more information about AWS CloudFormation quotas, see the <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html">AWS documentation</a>.</p>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_troubleshooting">Troubleshooting</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/troubleshooting.adoc</code></strong></em></p>
+<p>== Troubleshooting</p>
 </div>
-<div class="exampleblock">
-<div class="content">
 <div class="paragraph">
-<p><em>Steps for troubleshooting the deployment go here.</em></p>
+<p>&lt;Steps for troubleshooting the deployment go here.&gt;</p>
+</div>
 </div>
 </div>
 </div>
@@ -1351,7 +1362,7 @@ and to share your customizations with others.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-03 16:58:08 UTC
+Last updated 2020-06-03 20:48:38 UTC
 </div>
 </div>
 </body>
