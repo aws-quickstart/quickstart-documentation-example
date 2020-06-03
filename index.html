@@ -503,9 +503,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_launch_into_a_new_vpc">Launch into a new VPC</a></li>
 </ul>
 </li>
-<li><a href="#_best_practices_for_using_example_product_name_on_aws">Best practices for using Example Product Name on AWS</a></li>
-<li><a href="#_security">Security</a></li>
-<li><a href="#_other_useful_information">Other useful information</a></li>
 <li><a href="#_faq">FAQ</a></li>
 <li><a href="#_troubleshooting">Troubleshooting</a></li>
 <li><a href="#_send_us_feedback">Send us feedback</a></li>
@@ -523,11 +520,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1 text-left text-center">
 <h2 id="_quick_start_reference_deployment">Quick Start Reference Deployment</h2>
 <div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
 <p><strong>May, 2020</strong><br>
 <em>John Doe and Jane Doe - Example Company Name, Ltd.</em><br>
 <em>Jim Smith - AWS Global Partner SA, AWS<br>
 Joe Jones - Technical Product Manager, AWS</em></p>
+</div>
+</div>
 </div>
 <div class="paragraph text-left">
 <p><em><strong>The above information is configured within <code>specific/_settings.adoc</code></strong></em></p>
@@ -560,8 +561,12 @@ instructions for deploying <em>Example Product Name</em> on the AWS Cloud.</p>
 <div class="paragraph">
 <p><em><strong>This portion of the deployment guide is located at <code>docs/specific/target_and_usage</code></strong></em></p>
 </div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
 <p>This Quick Start is for users who &lt;target audience and usage scenario&gt;</p>
+</div>
+</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -585,8 +590,12 @@ collaborated with AWS on the content of the Quick Start.
 <div class="paragraph">
 <p><em><strong>This portion of the deployment guide is located at <code>docs/specific/product_description.adoc</code></strong></em></p>
 </div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
 <p>&lt;Describe how the software works on AWS.&gt;</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -633,6 +642,8 @@ After you deploy the Quick Start, we recommend that you enable the <a href="http
 <div class="paragraph">
 <p><em><strong>This portion of the deployment guide is located at <code>docs/specific/licenses.adoc</code></strong></em></p>
 </div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
 <p>These two paragraphs provide an example of the details you can provide. Provide links as appropriate.</p>
 </div>
@@ -650,12 +661,16 @@ After you deploy the Quick Start, we recommend that you enable the <a href="http
 </div>
 </div>
 </div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_architecture">Architecture</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><em><strong>This portion of the deployment guide is located at <code>docs/specific/architecture.adoc</code></strong></em></p>
 </div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
 <p>Deploying this Quick Start for a new virtual private cloud (VPC) with
 <strong>default parameters</strong> builds the following <em>Example Product Name</em> environment in the
@@ -711,6 +726,8 @@ configuration.</p>
 </div>
 </div>
 </div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_planning_the_deployment">Planning the deployment</h2>
 <div class="sectionbody">
@@ -728,8 +745,12 @@ Cloud.</p>
 <div class="paragraph">
 <p><em><strong>This portion of the deployment guide is located at <code>docs/specific/specialized_knowledge.adoc</code></strong></em></p>
 </div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
 <p>This Quick Start assumes familiarity with &lt;knowledge expectations&gt;.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -751,6 +772,8 @@ Cloud.</p>
 <div class="paragraph">
 <p>If necessary, request <a href="https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/">service quota increases</a> for the following resources. You might need to do this if an existing deployment uses these resources, and you might exceed the default quotas with this deployment. The <a href="https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/">Service Quotas console</a> displays your usage and quotas for some aspects of some services. For more information, see the <a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html">AWS documentation</a>.</p>
 </div>
+<div class="exampleblock">
+<div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -796,6 +819,8 @@ Cloud.</p>
 </tbody>
 </table>
 </div>
+</div>
+</div>
 <div class="sect3">
 <h4 id="_supported_regions">Supported Regions</h4>
 <div class="paragraph">
@@ -826,6 +851,13 @@ Certain regions are available on an opt-in basis. Please refer to the AWS Docume
 </div>
 <div class="sect3">
 <h4 id="_ec2_key_pairs">EC2 Key Pairs</h4>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><em>This section is conditional on EC2 instances being used in the Cloudformation Templates</em></p>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Make sure that at least one <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 key pair</a> exists in your AWS account in the Region where you plan to deploy the Quick Start. Make note of the key pair name. You need it during deployment. To create a key pair, follow the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">instructions in the AWS documentation</a>.</p>
 </div>
@@ -844,6 +876,8 @@ Certain regions are available on an opt-in basis. Please refer to the AWS Docume
 </div>
 <div class="sect3">
 <h4 id="_deployment_options">Deployment options</h4>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
 <p>This Quick Start provides two deployment options:</p>
 </div>
@@ -859,6 +893,8 @@ Certain regions are available on an opt-in basis. Please refer to the AWS Docume
 </div>
 <div class="paragraph">
 <p>The Quick Start provides separate templates for these options. It also lets you configure Classless Inter-Domain Routing (CIDR) blocks, instance types, and Example Product Name settings, as discussed later in this guide.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1239,30 +1275,28 @@ A confirmation page loads, and an email confirmation is sent to the account owne
 <div class="paragraph">
 <p><em><strong>This portion of the deployment guide is located at <code>docs/specific/additional_info.adoc</code></strong></em></p>
 </div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>== Best practices for using Example Product Name on AWS</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_best_practices_for_using_example_product_name_on_aws">Best practices for using Example Product Name on AWS</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p><em>Add any best practices for using the software.</em></p>
 </div>
+<div class="paragraph">
+<p>== Security</p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_security">Security</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p><em>Add any security-related information.</em></p>
 </div>
+<div class="paragraph">
+<p>== Other useful information</p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_other_useful_information">Other useful information</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p><em>Add any other details that will help the customer use the software on AWS.</em></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1272,6 +1306,8 @@ A confirmation page loads, and an email confirmation is sent to the account owne
 <div class="paragraph">
 <p><em><strong>This portion of the deployment guide is located at <code>docs/specific/faq.adoc</code></strong></em></p>
 </div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
 <p><strong>Q.</strong> I encountered a <strong>CREATE_FAILED</strong> error when I launched the Quick Start.</p>
 </div>
@@ -1292,12 +1328,20 @@ A confirmation page loads, and an email confirmation is sent to the account owne
 </div>
 </div>
 </div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_troubleshooting">Troubleshooting</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/troubleshooting.adoc</code></strong></em>
-<em>Steps for troubleshooting the deployment go here.</em></p>
+<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/troubleshooting.adoc</code></strong></em></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><em>Steps for troubleshooting the deployment go here.</em></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1335,7 +1379,7 @@ and to share your customizations with others.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-03 01:15:47 UTC
+Last updated 2020-06-03 14:38:42 UTC
 </div>
 </div>
 </body>
