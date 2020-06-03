@@ -22,9 +22,9 @@ jobs:
         python-version: 3.7.7
     - name: Generate dynamic content.
       run: ./docs/common/.utils/generate_dynamic_content.sh
-    - name: Build documentation
+    - name: Run local actions
       id: adoc
-      uses: tonynv/asciidoctor-action@master
+      uses: ./docs/common/.actions/asciidoctor-action
       with:
         program: "./docs/common/.utils/build_docs.sh"
     - name: Stage and Push changes to gh-pages branch.
