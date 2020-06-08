@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<title>Quick Start Reference Deployment</title>
+<style>
 
 
 
@@ -459,3 +468,672 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer{background:none}
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_quick_start_reference_deployment">Quick Start Reference Deployment</a></li>
+<li><a href="#_overview">Overview</a></li>
+<li><a href="#_example_product_name_on_aws"><em>Example Product Name</em> on AWS</a></li>
+<li><a href="#_cost">Cost</a></li>
+<li><a href="#_software_licenses">Software Licenses</a></li>
+<li><a href="#_architecture">Architecture</a></li>
+<li><a href="#_planning_the_deployment">Planning the deployment</a>
+<ul class="sectlevel2">
+<li><a href="#_specialized_knowledge">Specialized knowledge</a></li>
+<li><a href="#_aws_account">AWS account</a></li>
+<li><a href="#_technical_requirements">Technical requirements</a></li>
+</ul>
+</li>
+<li><a href="#_deployment_steps">Deployment Steps</a>
+<ul class="sectlevel2">
+<li><a href="#_step_1_sign_in_to_your_aws_account">Step 1. Sign in to your AWS account</a></li>
+<li><a href="#_step_2_subscribe_to_the_example_product_name_ami">Step 2. Subscribe to the Example Product Name AMI</a></li>
+<li><a href="#_step_3_launch_the_quick_start">Step 3. Launch the Quick Start</a></li>
+<li><a href="#_step_4_test_the_deployment">Step 4. Test the deployment</a></li>
+</ul>
+</li>
+<li><a href="#_send_us_feedback">Send us feedback</a></li>
+<li><a href="#_quick_start_reference_deployments">Quick Start reference deployments</a></li>
+<li><a href="#_github_repository">GitHub Repository</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<h2 id="_example_product_name_on_the_aws_cloud" class="discrete text-center"><em>Example Product Name</em> on the AWS Cloud</h2>
+</div>
+</div>
+<div class="sect1 text-left text-center">
+<h2 id="_quick_start_reference_deployment">Quick Start Reference Deployment</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>May, 2020</strong><br>
+<em>John Doe and Jane Doe - Example Company Name, Ltd.</em><br>
+<em>Jim Smith - AWS Global Partner SA, AWS &amp; Joe Jones - Technical Product Manager, AWS</em></p>
+</div>
+</div>
+</div>
+<div class="paragraph text-left">
+<p><em><strong>The above information is configured within <code>specific/_settings.adoc</code></strong></em></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Visit our <a href="https://github.com/aws-quickstart/quickstart-documentation-base">GitHub repository</a> for source files and to post feedback,
+report bugs, or submit feature ideas for this Quick Start.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph text-left">
+<p>This Quick Start was created by <em>Example Company Name, Ltd.</em> in collaboration with Amazon Web Services (AWS). <a href="http://aws.amazon.com/quickstart/">Quick Starts</a> are automated reference deployments that use AWS CloudFormation templates to deploy key technologies on AWS, following AWS best practices.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_overview">Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This Quick Start reference deployment guide provides step-by-step
+instructions for deploying <em>Example Product Name</em> on the AWS Cloud.</p>
+</div>
+<div class="paragraph">
+<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/target_and_usage</code></strong></em></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>This Quick Start is for users who &lt;target audience and usage scenario&gt;</p>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Please know that we may share who uses AWS
+Quick Starts with the AWS Partner Network (APN) Partner that
+collaborated with AWS on the content of the Quick Start.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_example_product_name_on_aws"><em>Example Product Name</em> on AWS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/product_description.adoc</code></strong></em></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>&lt;Describe how the software works on AWS.&gt;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cost">Cost</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You are responsible for the cost of the AWS services used while running
+this Quick Start reference deployment. There is no additional cost for
+using the Quick Start.</p>
+</div>
+<div class="paragraph">
+<p>The AWS CloudFormation template for this Quick Start includes
+configuration parameters that you can customize. Some of the settings,
+such as the instance type, affect the cost of deployment. For cost estimates,
+see the pricing pages for each AWS service you will use. Prices are subject to change.
+To get an estimate, you can use the</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+After you deploy the Quick Start, we recommend that you enable the <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-gettingstarted-turnonreports.html">AWS Cost and Usage Report</a>. This report delivers billing metrics to an Amazon Simple Storage Service (Amazon S3) bucket in your account. It provides cost estimates based on usage throughout each month and finalizes the data at the end of the month. For more information about the report, see the <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-costusage.html">AWS documentation</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_software_licenses">Software Licenses</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/licenses.adoc</code></strong></em></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>These two paragraphs provide an example of the details you can provide. Provide links as appropriate.</p>
+</div>
+<div class="paragraph">
+<p>Example content below:</p>
+</div>
+<div class="paragraph">
+<p><em>&lt;license information&gt;This Quick Start requires a license for Example Product Name. To use the Quick Start in your production environment, sign up for a license at &lt;link&gt;. When you launch the Quick Start, place the license key in an S3 bucket and specify its location.</em></p>
+</div>
+<div class="paragraph">
+<p><em>If you don’t have a license, the Quick Start deploys with a trial license. The trial license gives you &lt;n&gt; days of free usage in a non-production environment. After this time, you can upgrade to a production license by following the instructions at &lt;link&gt;.</em></p>
+</div>
+<div class="paragraph">
+<p><em>&lt;AMI information&gt;The Quick Start requires a subscription to the Amazon Machine Image (AMI) for Example Product Name, which is available from <a href="https://aws.amazon.com/marketplace/">AWS Marketplace</a>. Additional pricing, terms, and conditions may apply. For instructions, see <a href="#step-2.-subscribe-to-the-software-ami">step 2</a> in the deployment section.</em></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_architecture">Architecture</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/architecture.adoc</code></strong></em></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>Deploying this Quick Start for a new virtual private cloud (VPC) with
+<strong>default parameters</strong> builds the following <em>Example Product Name</em> environment in the
+AWS Cloud.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/architecture_diagram.png" alt="image" width="648" height="439">
+</div>
+</div>
+<div class="paragraph">
+<p>Figure 1: Quick Start architecture for <em>Example Product Name</em> on AWS</p>
+</div>
+<div class="paragraph">
+<p>As shown in Figure 1, the Quick Start sets up the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A highly available architecture that spans two Availability Zones.*</p>
+</li>
+<li>
+<p>A VPC configured with public and private subnets, according to AWS
+best practices, to provide you with your own virtual network on AWS.*</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the public subnets:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Managed network address translation (NAT) gateways to allow outbound
+internet access for resources in the private subnets.*</p>
+</li>
+<li>
+<p>A Linux bastion host in an Auto Scaling group to allow inbound Secure
+Shell (SSH) access to EC2 instances in public and private subnets.*</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the private subnets:
+* &lt;describe any additional components&gt;.</p>
+</div>
+<div class="paragraph">
+<p>*The template that deploys the Quick Start into an existing VPC skips
+the components marked by asterisks and prompts you for your existing VPC
+configuration.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_planning_the_deployment">Planning the deployment</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_specialized_knowledge">Specialized knowledge</h3>
+<div class="paragraph">
+<p>This deployment guide requires a moderate level of familiarity with
+AWS services. If you’re new to AWS, visit the
+<a href="https://aws.amazon.com/getting-started/">Getting Started Resource Center</a>
+and the <a href="https://aws.amazon.com/training/">AWS Training and Certification
+website</a>. These sites provide materials for learning how to design,
+deploy, and operate your infrastructure and applications on the AWS
+Cloud.</p>
+</div>
+<div class="paragraph">
+<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/specialized_knowledge.adoc</code></strong></em></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>This Quick Start assumes familiarity with &lt;knowledge expectations&gt;.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_aws_account">AWS account</h3>
+<div class="paragraph">
+<p>If you don’t already have an AWS account, create one at <a href="https://aws.amazon.com/">https://aws.amazon.com</a> by following the on-screen instructions. Part of the sign-up process involves receiving a phone call and entering a PIN using the phone keypad.</p>
+</div>
+<div class="paragraph">
+<p>Your AWS account is automatically signed up for all AWS services. You are charged only for the services you use.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_technical_requirements">Technical requirements</h3>
+<div class="paragraph">
+<p>Before you launch the Quick Start, your account must be configured as specified below. Otherwise, deployment might fail.</p>
+</div>
+<div class="sect3">
+<h4 id="_resource_limits">Resource Limits</h4>
+<div class="paragraph">
+<p>If necessary, request <a href="https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/">service quota increases</a> for the following resources. You might need to do this if an existing deployment uses these resources, and you might exceed the default quotas with this deployment. The <a href="https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/">Service Quotas console</a> displays your usage and quotas for some aspects of some services. For more information, see the <a href="https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html">AWS documentation</a>.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This deployment uses</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VPCs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Elastic IP addresses</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AWS Identity and Access Management (IAM) security groups</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IAM roles</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Auto Scaling groups</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application Load Balancers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Network Load Balancers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;type&gt; instances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;n&gt;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_supported_regions">Supported Regions</h4>
+<div class="paragraph">
+<p>The following regions are currently supported by this Quick Start Reference Architecture.</p>
+</div>
+<div class="paragraph">
+<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/regions.adoc</code></strong></em></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><em>us-east-1 (N. Virginia)</em> (EXAMPLE)</p>
+</li>
+<li>
+<p><em>us-east-2 (Ohio)</em> (EXAMPLE)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Certain regions are available on an opt-in basis. Please refer to the AWS Documentaiton on <a href="https://docs.aws.amazon.com/general/latest/gr/rande-manage.html">Managing Regions</a> for more information.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ec2_key_pairs">EC2 Key Pairs</h4>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p><em>This section is conditional on EC2 instances being used in the Cloudformation Templates</em></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Make sure that at least one <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">Amazon EC2 key pair</a> exists in your AWS account in the Region where you plan to deploy the Quick Start. Make note of the key pair name. You need it during deployment. To create a key pair, follow the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">instructions in the AWS documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>For testing or proof-of-concept purposes, we recommend creating a new key pair instead of using one that’s already being used by a production instance.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_iam_permissions">IAM Permissions</h4>
+<div class="paragraph">
+<p>Before launching the Quick Start, you must log in to the AWS Management Console with <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html">IAM permissions</a> for the resources and actions the templates deploy.</p>
+</div>
+<div class="paragraph">
+<p>The <em>AdministratorAccess</em> managed policy within IAM provides sufficient permissions, although your organization may choose to use a custom policy with more restrictions.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_deployment_options">Deployment options</h4>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>This Quick Start provides two deployment options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Deploy Example Product Name into a new VPC (end-to-end deployment)</strong>. This option builds a new AWS environment consisting of the VPC, subnets, NAT gateways, security groups, bastion hosts, and other infrastructure components. It then deploys Example Product Name into this new VPC.</p>
+</li>
+<li>
+<p><strong>Deploy Example Product Name into an existing VPC</strong>. This option provisions Example Product Name in your existing AWS infrastructure.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Quick Start provides separate templates for these options. It also lets you configure Classless Inter-Domain Routing (CIDR) blocks, instance types, and Example Product Name settings, as discussed later in this guide.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deployment_steps">Deployment Steps</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_step_1_sign_in_to_your_aws_account">Step 1. Sign in to your AWS account</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Sign in to your AWS account at <a href="https://aws.amazon.com" class="bare">https://aws.amazon.com</a> with an IAM user role that has the necessary permissions. For details, see <a href="#planning-the-deployment">Planning the deployment</a> earlier in this guide.</p>
+</li>
+<li>
+<p>Make sure that your AWS account is configured correctly, as discussed in the <a href="#technical-requirements">Technical requirements</a> section.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_2_subscribe_to_the_example_product_name_ami">Step 2. Subscribe to the Example Product Name AMI</h3>
+<div class="paragraph">
+<p>This Quick Start requires a subscription to the AMI for Example Product Name in AWS Marketplace.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Sign in to your AWS account.</p>
+</li>
+<li>
+<p>Open the page for the Example Product Name AMI in AWS Marketplace, and then choose <strong>Continue to Subscribe</strong>.</p>
+</li>
+<li>
+<p>Review the terms and conditions for software usage, and then choose <strong>Accept Terms</strong>.<br>
+A confirmation page loads, and an email confirmation is sent to the account owner. For detailed subscription instructions, see the <a href="https://aws.amazon.com/marketplace/help/200799470">AWS Marketplace documentation</a>.</p>
+</li>
+<li>
+<p>When the subscription process is complete, exit out of AWS Marketplace without further action. <strong>Do not</strong> provision the software from AWS Marketplace—the Quick Start deploys the AMI for you.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_3_launch_the_quick_start">Step 3. Launch the Quick Start</h3>
+<div class="paragraph">
+<p><strong>Note:</strong> You are responsible for the cost of the AWS services used while running this Quick Start reference deployment. There is no additional cost for using this Quick Start. For full details, see the pricing pages for each AWS service used by this Quick Start. Prices are subject to change.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Sign in to your AWS account, and choose one of the following options to launch the AWS CloudFormation template. For help with choosing an option, see <a href="#_Automated_Deployment">deployment options</a> earlier in this guide.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/_qs_deploy_links.adoc</code></strong></em></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://qs_launch_link">Deploy Example Product Name into a new VPC on AWS</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://qs_launch_link">Deploy Example Product Name into an existing VPC on AWS</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Important:</strong> If you’re deploying Example Product Name into an existing VPC, make sure that your VPC has two private subnets in different Availability Zones for the workload instances, and that the subnets aren’t shared. This Quick Start doesn’t support <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-sharing.html">shared subnets</a>. These subnets require <a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html">NAT gateways</a> in their route tables, to allow the instances to download packages and software without exposing them to the internet.</p>
+</div>
+<div class="paragraph">
+<p>Also, make sure that the domain name option in the DHCP options is configured as explained in the <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html">Amazon VPC documentation</a>. You provide your VPC settings when you launch the Quick Start.</p>
+</div>
+<div class="paragraph">
+<p>Each deployment takes about 30 minutes / 1 hour to complete.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Check the AWS Region that’s displayed in the upper-right corner of the navigation bar, and change it if necessary. This is where the network infrastructure for Example Product Name will be built. The template is launched in the us-east-1 Region by default.</p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>On the <strong>Create stack</strong> page, keep the default setting for the template URL, and then choose <strong>Next</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Specify stack details</strong> page, change the stack name if needed. Review the parameters for the template. Provide values for the parameters that require input. For all other parameters, review the default settings and customize them as necessary.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In the following tables, parameters are listed by category and described separately for the deployment options. When you finish reviewing and customizing the parameters, choose <strong>Next</strong>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+We recommend keeping the default settings for the three parameters labled 'Quick Start S3 bucket name', 'Quick Start S3 bucket
+Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick Start templates for your own deployment projects. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For additional details, see the <a href="https://aws-quickstart.github.io/option1.html">AWS Quick Start Contributor’s Guide</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><em>This is a placeholder to represent generated parameters. This will be automatically generated and overwritten when documentation is built.</em></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>On the options page, you can <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html">specify tags</a> (key-value pairs) for resources in your stack and <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html">set advanced options</a>. When you’re done, choose <strong>Next</strong>.</p>
+</li>
+<li>
+<p>On the <strong>Review</strong> page, review and confirm the template settings. Under <strong>Capabilities</strong>, select the two check boxes to acknowledge that the template creates IAM resources and might require the ability to automatically expand macros.</p>
+</li>
+<li>
+<p>Choose <strong>Create stack</strong> to deploy the stack.</p>
+</li>
+<li>
+<p>Monitor the status of the stack. When the status is <strong>CREATE_COMPLETE</strong>, the Example Product Name cluster is ready.</p>
+</li>
+<li>
+<p>Use the URLs displayed in the <strong>Outputs</strong> tab for the stack, as shown in Figure 2, to view the resources that were created.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/cfn_outputs.png" alt="image" width="648" height="439"></span></p>
+</div>
+<div class="paragraph">
+<p>Figure 2: Example Product Name outputs after successful deployment</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_4_test_the_deployment">Step 4. Test the deployment</h3>
+<div class="paragraph">
+<p>&lt;Add instructions for testing the deployment.&gt;</p>
+</div>
+<div class="paragraph">
+<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/additional_info.adoc</code></strong></em></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>== Best practices for using Example Product Name on AWS</p>
+</div>
+<div class="paragraph">
+<p><em>Add any best practices for using the software.</em></p>
+</div>
+<div class="paragraph">
+<p>== Security</p>
+</div>
+<div class="paragraph">
+<p><em>Add any security-related information.</em></p>
+</div>
+<div class="paragraph">
+<p>== Other useful information</p>
+</div>
+<div class="paragraph">
+<p><em>Add any other details that will help the customer use the software on AWS.</em></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><em><strong>This portion of the deployment guide is located at <code>docs/specific/faq.adoc</code></strong></em></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>== FAQ</p>
+</div>
+<div class="paragraph">
+<p><strong>Q.</strong> I encountered a <strong>CREATE_FAILED</strong> error when I launched the Quick Start.</p>
+</div>
+<div class="paragraph">
+<p><strong>A.</strong> If AWS CloudFormation fails to create the stack, we recommend that you relaunch the template with <strong>Rollback on failure</strong> set to <strong>No</strong>. (This setting is under <strong>Advanced</strong> in the AWS CloudFormation console, <strong>Options</strong> page.) With this setting, the stack’s state is retained and the instance is left running, so you can troubleshoot the issue. (For Windows, look at the log files in %ProgramFiles%\Amazon\EC2ConfigService and C:\cfn\log.)</p>
+</div>
+<div class="paragraph">
+<p><strong>Important:</strong> When you set <strong>Rollback on failure</strong> to <strong>No</strong>, you continue to incur AWS charges for this stack. Please make sure to delete the stack when you finish troubleshooting.</p>
+</div>
+<div class="paragraph">
+<p>For additional information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html">Troubleshooting AWS CloudFormation</a> on the AWS website.</p>
+</div>
+<div class="paragraph">
+<p><strong>Q.</strong> I encountered a size limitation error when I deployed the AWS CloudFormation templates.</p>
+</div>
+<div class="paragraph">
+<p><strong>A.</strong> We recommend that you launch the Quick Start templates from the links in this guide or from another S3 bucket. If you deploy the templates from a local copy on your computer or from a location other than an S3 bucket, you might encounter template size limitations. For more information about AWS CloudFormation quotas, see the <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html">AWS documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>== Troubleshooting</p>
+</div>
+<div class="paragraph">
+<p>&lt;Steps for troubleshooting the deployment go here.&gt;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_send_us_feedback">Send us feedback</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To post feedback, submit feature ideas, or report bugs, use the <strong>Issues</strong> section of the <a href="https://github.com/aws-quickstart/quickstart-documentation-base">GitHub repository</a> for this Quick Start. If you’d like to submit code, please review the <a href="https://aws-quickstart.github.io/">Quick Start Contributor’s Guide</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_quick_start_reference_deployments">Quick Start reference deployments</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>AWS Quick Start home page<br>
+<a href="https://aws.amazon.com/quickstart/" class="bare">https://aws.amazon.com/quickstart/</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_github_repository">GitHub Repository</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can visit our <a href="https://github.com/aws-quickstart/quickstart-documentation-base">GitHub repository</a> to download
+the templates and scripts for this Quick Start, to post your comments,
+and to share your customizations with others.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2020-06-04 15:00:35 -0500
+</div>
+</div>
+</body>
+</html>
